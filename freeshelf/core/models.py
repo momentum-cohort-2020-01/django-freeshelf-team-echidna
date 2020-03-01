@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models  
 from django.utils.text import slugify
 
 
@@ -13,8 +13,8 @@ class Book(models.Model):
    def __str__(self):
       return f"Title: {self.title} Author: {self.author}"
 
-class Category(models.Models):
-   name = models.Charfield(max_length=40)
+class Category(models.Model):
+   name = models.CharField(max_length=40)
    slug = models.SlugField(null=False, unique=True)
 
    def __str__(self):
@@ -22,7 +22,7 @@ class Category(models.Models):
 
    def save(self, *args, **kwargs):
       if not self.slug:
-         self.slug: = slugify(self.name)
+         self.slug = slugify(self.name)
       return super().save(*args, **kwargs)
 
 
