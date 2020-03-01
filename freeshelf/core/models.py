@@ -8,12 +8,12 @@ class Book(models.Model):
    description = models.TextField(max_length=None)
    date_added = models.DateTimeField(auto_now_add=True)
    url = models.URLField(max_length=200)
-   tag = models.ForeignKey('Tag', on_delete=models.DO_NOTHING, null=True, blank=True)
+   category = models.ForeignKey('Category', on_delete=models.DO_NOTHING, null=True, blank=True)
    
    def __str__(self):
       return f"Title: {self.title} Author: {self.author}"
 
-class Tag(models.Models):
+class Category(models.Models):
    name = models.Charfield(max_length=40)
    slug = models.SlugField(null=False, unique=True)
 
