@@ -3,6 +3,7 @@
 <body class="books-body">
     {% for book in books %}
     <div class="book" id="{{book.pk}}">
+        <img src='{{book.img}}'>
         <a class="book-title" href="{%url 'books-detail' book.pk %}">{{book.title}}</a>
         <p class="book-author">{{book.author}}</p>
         <p class="book-url">{{book.url}}</p>
