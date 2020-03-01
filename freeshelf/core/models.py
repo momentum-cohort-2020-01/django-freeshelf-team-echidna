@@ -1,5 +1,6 @@
 from django.db import models  
 from django.utils.text import slugify
+from PIL import Image
 
 
 class Book(models.Model):
@@ -9,6 +10,7 @@ class Book(models.Model):
    date_added = models.DateTimeField(auto_now_add=True)
    url = models.URLField(max_length=200)
    category = models.ForeignKey('Category', on_delete=models.DO_NOTHING, null=True, blank=True)
+   img = models.ImageField(default='default.png')
    
    def __str__(self):
       return f"Title: {self.title} Author: {self.author}"

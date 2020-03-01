@@ -60,6 +60,12 @@ hr {
     display: flex;
 }
 
+.book-img {
+    float: left;
+    max-width: 100px;
+    margin: 5px;
+}
+
 .book {
     border: 1px solid black;
     border-radius: 10px;
@@ -72,6 +78,10 @@ hr {
 .book-title {
     font-family: 'Odibee Sans';
     font-size: 20px;
+}
+
+.book-url {
+    margin-bottom: 10px;
 }
 
 .timestamp {
