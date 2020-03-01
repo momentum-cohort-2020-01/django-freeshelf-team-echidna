@@ -8,7 +8,7 @@
         <p class="book-url">{{book.url}}</p>
         <p class="book-description">{{book.description}}</p>
         <p class="timestamp">Added: {{book.date_added}}</p>
-        <p class="category">{{book.category}}</p>
+        <p class="category"><a href="/books/{{book.category}}">{{book.category}}</a></p>
     </div>
     {% endfor %}
 </body>
