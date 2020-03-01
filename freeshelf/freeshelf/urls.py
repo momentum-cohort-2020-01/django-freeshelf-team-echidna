@@ -21,4 +21,5 @@ urlpatterns = [
     path('', views.books_list, name = 'books-list'),
     path('books/<int:pk>/', views.books_detail, name = 'books-detail'),
     path('admin/', admin.site.urls),
+    path('books/<slug:slug>/', views.book_by_category, name='book-by-category')
 ]

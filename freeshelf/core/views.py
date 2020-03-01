@@ -13,5 +13,5 @@ def books_detail(request, pk):
 
 def book_by_category(request, slug):
     category = Category.objects.get(slug=slug)
-    book_by_category = Category.objects.filter(category=category)
+    book_by_category = Book.objects.filter(category=category)
     return render(request, 'core/book_by_category.html', {'books':book_by_category, 'category': category})
