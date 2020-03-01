@@ -32,6 +32,11 @@ hr {
     margin-right: 10px;
     font-size: 12px;
     font-family: 'PT Sans Narrow';
+
+}
+
+.categoryLinks {
+    color: black;
 }
 
 .site-name {
