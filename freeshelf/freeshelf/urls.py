@@ -23,6 +23,8 @@ urlpatterns = [
     path('', views.books_list, name = 'books-list'),
     path('books/<int:pk>/', views.books_detail, name = 'books-detail'),
     path('admin/', admin.site.urls),
-    path('books/<slug:slug>/', views.book_by_category, name='book-by-category')
+    path('books/<slug:slug>/', views.book_by_category, name='book-by-category'),
+    path('books/<slug:slug>/oldfirst/', views.books_oldest_first, name = 'books-oldest-first'),
+    path('books/<slug:slug>/newfirst/', views.books_newest_first, name = 'books-newest-first'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
