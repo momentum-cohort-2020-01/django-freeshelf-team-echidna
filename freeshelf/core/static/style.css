@@ -6,6 +6,8 @@
 
 body {
     font-family: sans-serif;
+    background-color: rgb(226, 236, 245);
+    font-family: 'PT Sans Narrow';
 }
 
 hr {
@@ -59,6 +61,7 @@ hr {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .book-img {
@@ -76,12 +79,19 @@ hr {
     margin: 10px;
     padding: 5px;
     max-width: 400px;
+    min-width: 300px;
     font-family: 'PT Sans Narrow';
+}
+
+.book:hover {
+    box-shadow: 5px 5px 5px rgb(87, 87, 87);
+    background: linear-gradient(rgb(72, 116, 163), rgb(53, 87, 122));
 }
 
 .book-title {
     font-family: 'Odibee Sans';
     font-size: 20px;
+    font-style: italic;
 }
 
 .book-url {
