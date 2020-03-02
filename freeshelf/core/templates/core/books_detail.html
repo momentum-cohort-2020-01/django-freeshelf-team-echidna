@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Here's where the book details are gonna go</h2>
+<div class="detail-container">
+<h2 class="detail-title">{{book.title}}</h2>
+<div class="detail-author">{{book.author}}</div>
+<img class="detail-img" src='{{book.img.url}}'>
+<a class="detail-url" href="{{book.url}}">{{book.url}}</a>
+<div class="detail-description">{{book.description}}</div>
+<div class="detail-timestamp">Added: {{book.date_added}}</div>
+<div class="category">More like this: <a href="/books/{{book.category}}">{{book.category}}</a></div>
+</div>
 {% endblock %}

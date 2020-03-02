@@ -30,6 +30,7 @@ hr {
 .category {
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 10px;
     font-size: 12px;
     font-family: 'PT Sans Narrow';
 
@@ -63,7 +64,10 @@ hr {
 .book-img {
     float: left;
     max-width: 100px;
-    margin: 5px;
+    margin: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(54, 54, 54);
 }
 
 .book {
@@ -87,4 +91,51 @@ hr {
 .timestamp {
     font-size: 10px;
     margin-top: 10px;
+}
+
+.detail-container {
+    text-align: center;
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'PT Sans Narrow';
+}
+
+.detail-title {
+    display: block;
+    font-family: 'Odibee Sans';
+    font-size: 30px;
+    margin: 5px;
+    font-style: italic;
+}
+
+.detail-author {
+    display: block;
+    margin: 3px;
+}
+
+.detail-img {
+    display: block;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(54, 54, 54);
+}
+
+.detail-url {
+    font-style: italic;
+    margin: 5px;
+}
+
+.detail-description {
+    margin: 10px;
+}
+
+.detail-timestamp {
+    font-size: 15px;
+    font-style: italic;
+    margin: 5px;
 }
