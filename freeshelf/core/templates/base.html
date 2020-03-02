@@ -24,6 +24,10 @@
         <div class="category"><a class='categoryLinks' href='/books/javascript/'> JavaScript | </a></div>
         <div class="category"><a class='categoryLinks' href='/books/python/'> Python | </a></div>
         <div class="category"><a class='categoryLinks' href='/books/django/'> Django | </a></div>
+        <div class="category"><a class='sortLinks' href= '/books/{{ category.slug|default:"no" }}/newfirst/'>newest first</a></div>
+        <div class="category"><a class='sortLinks' href= '/books/{{ category.slug }}/oldfirst/'>oldest first</a></div>
+
+        
     </div>
 </header>
 <body>
