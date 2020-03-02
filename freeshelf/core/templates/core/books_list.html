@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-    <div class="category"><a class='sortLinks' href= '/books/{{ category.slug|default:"no" }}/newfirst/'>newest first</a></div>
-    <div class="category"><a class='sortLinks' href= '/books/{{ category.slug }}/oldfirst/'>oldest first</a></div>
+
 <body class="books-body">
     {% for book in books %}
     <div class="book" id="{{book.pk}}">

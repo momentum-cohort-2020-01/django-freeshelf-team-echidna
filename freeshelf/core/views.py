@@ -20,9 +20,9 @@ def book_by_category(request, slug):
 def books_oldest_first(request, slug):
     category = Category.objects.get(slug=slug)
     books = Book.objects.filter(category=category).order_by('date_added')
-    return render(request, 'core/books_list.html', {'books': books})
+    return render(request, 'core/books_list.html', {'books': books, 'category': category})
 
 def books_newest_first(request, slug):
     category = Category.objects.get(slug=slug)
     books = Book.objects.filter(category=category).order_by('-date_added')
-    return render(request, 'core/books_list.html', {'books': books})
+    return render(request, 'core/books_list.html', {'books': books, 'category': category})
