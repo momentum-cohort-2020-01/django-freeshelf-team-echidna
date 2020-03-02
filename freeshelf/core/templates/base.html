@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Odibee+Sans|PT+Sans+Narrow&display=swap" rel="stylesheet">    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Odibee+Sans|PT+Sans+Narrow&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
     {% block title %}<title>Freeshelf</title>{% endblock %}
 </head>
 <header class="header">
     <h1 class="site-name">FREESHELF</h1>
-    <div class="login">Login | Register</div>
+    <a class="login" href="/accounts/login/">Login | Register</a>
     <hr>
     <div class="head-categories">
+        <div class="category"><a class='categoryLinks' href="{% url 'books-list' %}">Home | </a></div>
         <div class="category"><a class='categoryLinks' href="/books/all/">  All | </a></div>
         <div class="category"><a class='categoryLinks' href='/books/html/'> HTML | </a></div>
         <div class="category"><a class='categoryLinks' href='/books/css/'> CSS | </a></div>
