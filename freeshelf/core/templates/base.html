@@ -11,7 +11,10 @@
 </head>
 <header class="header">
     <h1 class="site-name">FREESHELF</h1>
-    <a class="login" href="/accounts/login/">Login | Register</a>
+    <div class="login">
+    <a href="/accounts/login/">Login </a> 
+    <a href="/accounts/logout/"> | Logout </a>
+    </div>
     <hr>
     <div class="head-categories">
         <div class="category"><a class='categoryLinks' href="{% url 'books-list' %}">Home | </a></div>
