@@ -26,6 +26,5 @@ urlpatterns = [
     path('books/<slug:slug>/', views.book_by_category, name='book-by-category'),
     path('books/<slug:slug>/oldfirst/', views.books_oldest_first, name = 'books-oldest-first'),
     path('books/<slug:slug>/newfirst/', views.books_newest_first, name = 'books-newest-first'),
-    path('books/<int:pk>/favorite_book/', views.favorite_book, name = 'favorite-book'),
     path('accounts/', include('registration.backends.default.urls'), name='login'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

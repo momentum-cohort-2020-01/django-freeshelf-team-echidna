@@ -6,13 +6,11 @@
 <img class="detail-img" src='{{book.img.url}}'>
 <a class="detail-url" href="{{book.url}}">{{book.url}}</a>
 <div class="detail-description">{{book.description}}</div>
-<div class="favorite-section">
-    {% if is_favorite %}
-    <a href="{% url 'favorite-book' pk=book.pk %}"><i class="fas fa-star"></i></a>
-    {% else %}
-    <a href="{% url 'favorite-book' pk=book.pk %}"><i class="far fa-star"></i></a>
-    {% endif %}
-</div>
+{% if book in favorite_book %}
+<i class="fas fa-star"></i>
+{% else %}
+<i class="far fa-star"></i>
+{% endif %}
 <div class="detail-timestamp">Added: {{book.date_added}}</div>
 <div class="category">More like this: <a href="/books/{{book.category}}">{{book.category}}</a></div>
 </div>
