@@ -10,6 +10,11 @@
         <p class="book-author">{{book.author}}</p>
         <a class="book-url" href="{{book.url}}">{{book.url}}</a>
         <p class="book-description">{{book.description}}</p>
+        {% if book in favorite_book %}
+        <i class="fas fa-star"></i>
+        {% else %}
+        <i class="far fa-star"></i>
+        {% endif %}
         <p class="timestamp">Added: {{book.date_added}}</p>
         <p class="category"><a href="/books/{{book.category}}">{{book.category}}</a></p>
     </div>
